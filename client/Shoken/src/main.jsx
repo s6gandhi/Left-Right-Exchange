@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MoralisProvider } from 'react-moralis'
+
 import App from './App'
 import './index.css'
 
+import { TransactionsProvider } from "./context/TransactionContext";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <MoralisProvider>
+  <TransactionsProvider>
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  </MoralisProvider>
+  </TransactionsProvider>
+
 )
